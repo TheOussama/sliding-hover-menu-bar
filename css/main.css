@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;800;900&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+:root {
+  --color-primary: #2998ff;
+  --color-secondary: #34495e;
+  --color-dark: #000;
+  --color-bg: #fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Popppins", sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+  background: var(--color-dark);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.nav {
+  position: relative;
+  width: 50rem;
+  height: 5rem;
+  background: var(--color-secondary);
+  border-radius: 1rem;
+  font-size: 0;
+  -webkit-box-shadow: 0 0.2rem 0.3rem 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.2rem 0.3rem 0 rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__link {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  line-height: 5rem;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.nav__animation {
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  top: 0;
+  z-index: 0;
+  background: var(--color-primary);
+  border-radius: 1rem;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.nav__link:nth-child(1):hover ~ .nav__animation {
+  left: 0;
+}
+
+.nav__link:nth-child(2):hover ~ .nav__animation {
+  left: 10rem;
+}
+
+.nav__link:nth-child(3):hover ~ .nav__animation {
+  left: 20rem;
+}
+
+.nav__link:nth-child(4):hover ~ .nav__animation {
+  left: 30rem;
+}
+
+.nav__link:nth-child(5):hover ~ .nav__animation {
+  left: 40rem;
+}
+
+.nav--1 .nav__animation {
+  height: 0.5rem;
+  top: 0;
+  border-radius: 0;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.nav--2 .nav__animation {
+  height: 0.5rem;
+  top: calc(100% - 0.5rem);
+  border-radius: 0;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
